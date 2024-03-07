@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.portafoliowebmariano.rickandmortyapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.portafoliowebmariano.rickandmortyapp"
         minSdk = 22
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -33,9 +33,20 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata:2.6.2")
+    //Fragment
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+    //Activity
+    implementation("androidx.activity:activity-ktx:1.8.2")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
