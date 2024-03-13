@@ -3,24 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/backgrounBar"
+    android:background="#DCFFF900"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
-        android:src="@drawable/rym"
+        android:layout_marginBottom="1dp"
+        android:src="@drawable/rymlogo"
+        android:background="#F8000000"
+        android:padding="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"
         />
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/baseline_info_24"
+        app:tint="@color/backgrounMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

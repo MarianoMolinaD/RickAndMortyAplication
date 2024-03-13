@@ -6,4 +6,5 @@
     <color name="backgrounBar">#4B4B4B</color>
     <color name="backgrounAlive">#00FF38</color>
     <color name="backgrounCard">#7E7E7E</color>
+    <color name="backgrounMain">#FF0E6E0B</color>
 </resources>
