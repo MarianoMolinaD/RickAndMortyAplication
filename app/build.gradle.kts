@@ -39,6 +39,10 @@ android {
 }
 
 dependencies {
+
+    //Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     // LiveData
@@ -47,6 +51,9 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     //Activity
     implementation("androidx.activity:activity-ktx:1.8.2")
+    //Retrofit
+    implementation( "com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

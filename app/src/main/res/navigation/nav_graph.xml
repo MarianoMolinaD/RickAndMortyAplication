@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.portafoliowebmariano.rickandmortyapp.ui.fragment.CharactersFragment"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" >
+        <action
+            android:id="@+id/action_charactersFragment_to_characterInformationFragment"
+            app:destination="@id/characterInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterInformationFragment"
+        android:name="com.portafoliowebmariano.rickandmortyapp.ui.fragment.CharacterInformationFragment"
+        android:label="fragment_character_information"
+        tools:layout="@layout/fragment_character_information" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.portafoliowebmariano.rickandmortyapp.ui.fragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main"
+        >
+        <action
+            android:id="@+id/action_mainFragment_to_charactersFragment"
+            app:destination="@id/charactersFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_characterInformationFragment"
+            app:destination="@id/characterInformationFragment" />
+    </fragment>
+</navigation>
