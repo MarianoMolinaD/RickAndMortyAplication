@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="R58MC2JDG0A" />
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\Acer nitro 5\.android\avd\Pixel_4_API_26.avd" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2024-03-13T04:15:03.816256600Z" />
+    <timeTargetWasSelectedWithDropDown value="2024-03-14T01:29:30.510024400Z" />
   </component>
 </project>

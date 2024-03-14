@@ -9,11 +9,11 @@ import kotlinx.coroutines.withContext
 class CharactesServices {
     private val retrofit = RetrofitHelper.getRetrogit()
 
-    suspend fun getCharactersApi(): CharacterData{
-        return withContext(Dispatchers.IO){
-            val response = retrofit.create(CharacterApiClient::class.java).getAllCharacters()
+    suspend fun getCharactersApi(): CharacterData {
+        return withContext(Dispatchers.IO) {
+            val response =
+                retrofit.create(CharacterApiClient::class.java).getAllCharacters("character/")
             response.body()!!
         }
     }
-
 }

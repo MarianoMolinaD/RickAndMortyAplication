@@ -33,24 +33,12 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initController()
-        initAplicartion()
     }
 
-    private fun initAplicartion() {
-        Log.i("Mitag", "Entra")
-        var response = CharactesServices()
-        CoroutineScope(Dispatchers.IO).launch {
-            var result = response.getCharactersApi().results
-
-            for (resultados in result){
-                Log.i("Mitag", resultados.name)
-            }
-        }
-    }
 
     private fun initController() {
         binding.cardPersonajes.setOnClickListener{
-            findNavController().navigate(R.id.action_mainFragment_to_characterInformationFragment)
+            findNavController().navigate(R.id.action_mainFragment_to_charactersFragment)
         }
     }
 }

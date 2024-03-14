@@ -13,8 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCharacters"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@drawable/backgroudn_main"
         app:layout_constraintTop_toBottomOf="@+id/containerBar"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/items_character"

@@ -7,11 +7,14 @@ import com.portafoliowebmariano.rickandmortyapp.model.provider.CharactersProvide
 
 class Repository {
     private val api = CharactesServices()
-
+    private val provider = CharactersProvider
     suspend fun getAllCharacters(): CharacterData {
         var responseCharacters = api.getCharactersApi()
-        var currenteCharacters = CharactersProvider.CharactersRM
-        currenteCharacters = responseCharacters
-        return currenteCharacters
+
+        if (provider.CharactersRM == null){
+            provider.CharactersRM = responseCharacters
+            return provider.CharactersRM!!
+        }
+        else return  provider.CharactersRM!!
     }
 }
