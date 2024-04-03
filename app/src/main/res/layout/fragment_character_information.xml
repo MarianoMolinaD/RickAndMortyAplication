@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.CharacterInformationFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/backgroudn_main"
-        >
+        android:background="@drawable/backgroudn_main">
 
         <include
             android:id="@+id/containerBar"
@@ -36,6 +36,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <FrameLayout
+                    android:id="@+id/flStatus"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/backgrounAlive" />
@@ -47,6 +48,7 @@
                     app:cardCornerRadius="16dp">
 
                     <ImageView
+                        android:id="@+id/iv_character"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/rick" />
@@ -56,22 +58,31 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/backgrounAlive"
                 app:cardCornerRadius="12dp"
                 app:layout_constraintBottom_toBottomOf="@+id/cardPhoto"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardPhoto">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/cvStatus"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:fontFamily="@font/acme"
-                    android:text="Alive"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:background="@color/backgrounAlive">
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:fontFamily="@font/acme"
+                        android:text="Alive"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -87,7 +98,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ccContainerPhoto" />
-
 
 
         <androidx.cardview.widget.CardView
@@ -323,4 +333,4 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+</ScrollView>

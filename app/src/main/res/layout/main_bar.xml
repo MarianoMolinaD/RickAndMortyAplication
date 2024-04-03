@@ -6,6 +6,8 @@
     android:background="#DCFFF900"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
     <ImageView
         android:layout_width="0dp"
         android:layout_height="60dp"
@@ -29,6 +31,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
+
+        />
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:paddingHorizontal="10dp"
+        android:background="?selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/white"
 
         />
 

@@ -13,12 +13,23 @@
         <action
             android:id="@+id/action_charactersFragment_to_characterInformationFragment"
             app:destination="@id/characterInformationFragment" />
+        <action
+            android:id="@+id/action_charactersFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/characterInformationFragment"
         android:name="com.portafoliowebmariano.rickandmortyapp.ui.fragment.CharacterInformationFragment"
         android:label="fragment_character_information"
-        tools:layout="@layout/fragment_character_information" />
+        tools:layout="@layout/fragment_character_information" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_characterInformationFragment_to_charactersFragment"
+            app:destination="@id/charactersFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.portafoliowebmariano.rickandmortyapp.ui.fragment.MainFragment"
@@ -29,7 +40,12 @@
             android:id="@+id/action_mainFragment_to_charactersFragment"
             app:destination="@id/charactersFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_characterInformationFragment"
-            app:destination="@id/characterInformationFragment" />
+            android:id="@+id/action_mainFragment_to_episodesFragment"
+            app:destination="@id/episodesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.portafoliowebmariano.rickandmortyapp.ui.fragment.EpisodesFragment"
+        android:label="fragment_episodes"
+        tools:layout="@layout/fragment_episodes" />
 </navigation>
